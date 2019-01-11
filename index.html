@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generator stopek dla CyberForces i TestArmy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container mb">
+        <h2>Instrukcja obsługi aplikacji tworzącej stopkę do maila</h2>
+        <ol>
+            <li>Zdjęcie należy wgrać np. na Google Photos czy https://pl.imgbb.com/ i wkleić URL do generatora.</li>
+            <li>Najbezpieczniejszym i najpewniejszym rozwiązaniem, jest skorzystanie z url zdjęcia wgranego na
+                https://testarmy.com/team/ </li>
+            <li style="color: red;">UWAGA - w polu nr telefu należy wpisac całość tekstu np. "tel: 123-456-789"</li>
+            <li>Po wypełnieniu pól należy kliknąć "Generuj".</li>
+            <li>Po wygenerowaniu, kopiujemy zawartość poprzez kliknięcie przysisku "Kopiuj".</li>
+            <li>Przechodzimy do ustawień skrzynki pocztowej</li>
+            <li>W zakładce podpis wklejamy skopiowaną wcześniej treść</li>
+            <li>Zapisujemy ustawienia</li>
+            <li>Testujemy działanie wysyłając maila do koleżanki z pracy :)</li>
+        </ol>
+    </section>
+
+    <section class="container mb">
+        <h2>Generator podpisu e-mail</h2>
+        <form id="form-generator" enctype="multipart/form-data" action="/" method="post">
+            <div class="form-group">
+                <label for="name" class="required">Imię</label>
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Wprowadź imię"
+                    name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname" class="required">Nazwisko</label>
+                <input type="text" class="form-control" id="surname" aria-describedby="surnameHelp" placeholder="Wprowadź nazwisko"
+                    name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="position" class="required">Stanowisko</label>
+                <input type="text" class="form-control" id="position" aria-describedby="positionHelp" placeholder="Twoje stanowisko"
+                    name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="required">Nr telefonu</label>
+                <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Twój nr telefonu"
+                    name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="image_file" class="required">Zdjęcie</label>
+                <input type="text" class="form-control" id="image" name="image_social" placeholder="Adres www do zdjęcia profilu"
+                    required>
+            </div>
+            <div class="text-align-center mt mb">
+                <button type="submit" name="submit" class="button--blue" id="button-submit">Generuj</button>
+            </div>
+        </form>
+    </section>
+
+    <hr class="mt mb">
+
+    <!-- SIGNATURE TEMPLATE -->
+
+    <section id="source_code">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <table cellpadding="0" cellspacing="0" width="500" border="0" style="border-collapse: collapse; border-spacing: 0;" >
+            <tr>
+                <td width="100" valign="top" align="center">
+                    <img class="main-img" id="image_social_field" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtIPfA_K_ekeXpgzZtJxQ4fU0HpWfSbyLkdEo3Pw40z-onw3Ji"
+                        alt="Photo" style="border-radius: 50%; border: 2px solid #25368e ; width: 90px; height: 90px; object-fit: cover;">
+                </td>
+
+                <td colspan="2" width="auto" style="text-align: left; padding-left: 15px;">
+
+                    <p class="space--small" style="font-size: 0; height: 10px; margin: 0;">
+                    </p>
+
+                    <p class="name" style="font-size: 18px;line-height: 18px; color: #25368e ;margin: 0;">
+                        <span id="name_field">Jakub</span> <span id="surname_field" style="font-weight: bold">Zepsuł</span>
+                    </p>
+
+                    <p class="space--small" style="font-size: 0; height: 10px; margin: 0;">
+                    </p>
+
+                    <p class="position" id="position_field" style="font-size: 14px; line-height: 20px;color: #a6a6a6; margin: 0;font-style: italic;">
+                        Generator Manager
+                    </p>
+
+                    <p class="space--hr" style="font-size: 0; margin: 10px 0; height: 0px; width: 20px; border: 1px solid #25378b;">
+                    </p>
+
+                    <p class="number" id="phone_field" style="font-size: 14px; line-height: 16px; margin: 0; color: #a6a6a6;">
+                        tel: 666-666-666
+                    </p>
+                    <p class="logo" style="width: 30%; float:right; margin: 0; font-size: 0; text-align: right">
+                        <img id="logo_field" src="https://raw.githubusercontent.com/jasztemborski/testuj-stopka-generator/master/testujlogo.png"
+                            alt="logo" style="max-width: 100%;">
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="padding-left: 15px; background-color: #25378b; bgcolor: #25378b;">
+                    <p class="space--small" style="font-size: 0; height: 24px; margin: 0;">
+                    </p>
+                    <p id="footer-info" class="info" style="font-size: 14px; line-height: 18px; color: white; margin:0; padding-left: 10px; border-left: 2px solid #939393">
+                        <span style="font-weight: bold;">TestArmy Group S.A.</span><br>
+                        <span>ul. Pe⁠tuniow⁠a 9⁠/5,</span><br>
+                        <span>53-238 W⁠roclaw, Pol⁠and</span>
+                    </p>
+                    <p class="space--small" style="font-size: 0; height: 24px; margin: 0;">
+                    </p>
+                </td>
+                <td style="padding-top: 24px; background-color: #25378b; bgcolor: #25378b; text-align: center" valign="top" width="120">
+                    <a style=" text-decoration: none;" href="https://pl-pl.facebook.com/testujpl/" id="facebook_private_social_field">
+                        <img style="background-color: #fff;
+                        border: 1px solid #fff;
+                        border-radius: 100%;
+                        width: 15%;margin:2px 2px 0" alt='facebook icon' src="https://gitlab.com/jakub.asztemborski/generator-testuj/raw/master/fb.png">
+                    </a>
+                    <a style=" text-decoration: none;" href="https://www.linkedin.com/company/testuj-pl?originalSubdomain=pl" id="facebook_private_social_field">
+                        <img style="background-color: #fff;
+                        border: 1px solid #fff;
+                        border-radius: 100%;
+                        width: 15%; margin:2px 2px 0" alt='facebook icon' src="https://gitlab.com/jakub.asztemborski/generator-testuj/raw/master/in.png">
+                    </a>
+                    <a style=" text-decoration: none;" href="https://www.youtube.com/channel/UC5nfCVMCEhYjCgnUoufoLhw" id="facebook_private_social_field">
+                        <img style="background-color: #fff;
+                        border: 1px solid #fff;
+                        border-radius: 100%;
+                        width: 15%; margin:2px 2px 0" alt='facebook icon' src="https://gitlab.com/jakub.asztemborski/generator-testuj/raw/master/yt.png">
+                    </a>
+                    <br>
+                    <a style=" font-size: 14px; color: white;" href="https://www.testuj.pl">www.testuj.pl</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <p style="margin: 0; padding-top: 10px; padding-left: 5px; padding-right: 5px; font-size: 10px; color:#a6a6a6; text-align: center;">
+                        NIP: 8992754194, REGON: 022426578, Numer KRS: 0000679700, Sąd Rejonowy dla Wroclawia-Fabrycznej, VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy: 123 000 PLN
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+    <section class="container text-align-center mt">
+        <button id="copy-button" class="button--blue">Kopiuj</button>
+        <p class="copy-info">Skopiowano zawartość</p>
+    </section>
+
+    <!-- SIGNATURE TEMPLATE END -->
+
+    <hr class="mt mb">
+
+    <section class="container mb">
+        <textarea id="html_code" name="source_code_area"></textarea>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
